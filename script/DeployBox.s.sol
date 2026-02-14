@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
 
-import {Script} from "forge-std-script.sol";
-import {BoxV1} from "./BoxV1.sol";
-import {ERC1967Proxy} from "@openzeppelin/contracts/proxy/ERC1967Proxy.sol";
+import {Script} from "forge-std/Script.sol";
+import {BoxV1} from "../src/BoxV1.sol";
+import {ERC1967Proxy} from "@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol";
 
 contract DeployBox is Script {
     function run() external returns (address) {
