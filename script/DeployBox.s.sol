@@ -15,7 +15,7 @@ contract DeployBox is Script {
         vm.startBroadcast();
         BoxV1 boxV1 = new BoxV1(); //implementation contract
         ERC1967Proxy proxy = new ERC1967Proxy(address(boxV1), "");
-        boxV1.initialize(); //initialize the proxy contract
+        BoxV1(address(proxy)).initialize(); //initialize the proxy contract
         vm.stopBroadcast();
         return address(proxy);
     }
